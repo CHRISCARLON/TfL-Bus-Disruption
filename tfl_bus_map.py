@@ -45,23 +45,6 @@ def plot_routes(df, map_center=(51.509865, -0.118092), zoom_start=12, jump_thres
     logo_url = 'https://labs.os.uk/public/os-api-branding/v0.1.0/img/os-logo-maps.svg'
     FloatImage(logo_url, bottom=1, left=1).add_to(route_map)
 
-    # Include the Google Fonts link for 'DM Mono' and create the map title using HTML
-    map_title = "TfL Bus Route Disruption Heat Map"
-    subtitle = "(Using TfL Passenger Usage Data and DfT Street Manager Data from April 2022 to March 2023)"
-
-    title_html = '''
-    <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
-    </head>
-    ''' + (f'<div style="position:absolute; z-index:100000; left:113.385827px; top:10px; background-color:lightgrey; '
-           f'padding:10px; border-radius:5px; font-family:\'Montserrat\', sans-serif;">'
-           f'<h1 style="margin:0; font-size:18px;">{map_title}</h1>'
-           f'<h2 style="margin:0; font-size:12px;">{subtitle}</h2></div>')
-
-    route_map.get_root().html.add_child(folium.Element(title_html))
-
     # Create colour map for plotting weighted bus routes
     color_map = {
         'Impact Level 1': '#8dd35f',  # Light Green
