@@ -7,7 +7,7 @@ from streamlit_folium import folium_static
 
 def main():
     st.set_page_config(layout="wide")
-    st.title("TfL Bus Route Disruption Map")
+    st.title("TfL Bus Route Disruption Map: Version 1.0")
 
     file_path = "final_bus_data.parquet"
     df = read_parquet_and_ensure_list(file_path)
