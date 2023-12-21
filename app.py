@@ -41,7 +41,7 @@ def main():
     df_2 = merge_excel_with_df(df, "output.xlsx")
     df_3 = add_deciles_for_disruption_score(df_2)
     folium_map = plot_routes(df_3)
-    folium_static(folium_map, width=1300, height=850)
+    folium_static(folium_map, width=1100, height=850)
 
 
 if __name__ == "__main__":
