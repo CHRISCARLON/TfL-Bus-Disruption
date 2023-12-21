@@ -7,7 +7,7 @@ from streamlit_folium import folium_static
 
 def main():
     st.set_page_config(layout="wide")
-    st.title("TfL Bus Route Disruption Map (Version 1.0)")
+    st.title(":bus: TfL Bus Route Disruption Map (Version 1.0)")
     st.markdown("""
     **Data Sources:**
     - Street Manager permit data from March 2022 to April 2023.
