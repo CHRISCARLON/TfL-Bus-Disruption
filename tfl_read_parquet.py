@@ -1,6 +1,9 @@
 import pandas as pd
 import numpy as np
+import streamlit as st
 
+
+@st.cache_data
 def read_parquet_and_ensure_list(file_path,
                                  column_name='lineStrings'):
     """
@@ -27,6 +30,7 @@ def read_parquet_and_ensure_list(file_path,
         raise ValueError(f"Column '{column_name}' not found in the DataFrame.")
 
 
+@st.cache_data
 def merge_excel_with_df(df, excel_file_path, merge_column='id',
                         additional_column='sm_weighted_disruption_score'):
     """

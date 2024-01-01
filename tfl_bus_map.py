@@ -19,6 +19,7 @@ def is_jump(coord1, coord2, km_threshold):
     return lat_diff > threshold_degrees or lon_diff > lon_threshold_degrees
 
 
+@st.cache_data
 def plot_routes(df, map_center=(51.509865, -0.118092), zoom_start=12, jump_threshold_km=1.5):
     """
     Plots routes from a DataFrame on a Folium map using decile groupings for color gradients.

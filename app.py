@@ -6,13 +6,15 @@ from streamlit_folium import folium_static
 
 
 def title_page():
-    st.markdown("# :bus: TfL Bus Route Disruption Map Version 1.1")
+    st.markdown("# :bus: TfL Historic Bus Route Disruption Map Version 1.1")
     st.warning("""
     **Contains public sector information licensed under the Open Government Licence v3.0.**
+    \n *Please note that this app is for educational purposes only.* 
     \n**Data Sources:**
     \n- Street Manager permit data from March 2022 to April 2023.
     \n- TfL bus passenger data from March 2022 to April 2023.
-    \n- TfL bus routes (Using TfL's open data API).
+    \n- TfL bus routes from TfL's open data API.
+    \n- OS ZoomStack from OS Data Hub Maps API. 
     """)
     st.markdown("""
     **Methodology:**
@@ -50,6 +52,11 @@ cycle through them when clicked.
 
 
 def map_page():
+    st.subheader("Please use the filter underneath the colour bar to add and remove bus routes from the map.")
+    st.info("""
+    **Remember that routes in black = no data!**
+    \n**This will be rectified in future versions.**
+    """)
     file_path = "final_bus_data.parquet"
     df = read_parquet_and_ensure_list(file_path)
     df_2 = merge_excel_with_df(df, "output.xlsx")
@@ -60,7 +67,7 @@ def map_page():
 
 def main():
     st.set_page_config(layout="wide")
-    page = st.sidebar.radio("Please select a page", [":house: Home Page", ":world_map: Map Page"])
+    page = st.sidebar.radio("**Please select a page**", [":house: Home Page", ":world_map: Map Page"])
 
     if page == ":house: Home Page":
         title_page()
