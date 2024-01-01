@@ -10,9 +10,9 @@ def title_page():
     st.warning("""
     **Contains public sector information licensed under the Open Government Licence v3.0.**
     \n**Data Sources:**
-    - Street Manager permit data from March 2022 to April 2023.
-    - TfL bus passenger data from March 2022 to April 2023.
-    - TfL bus routes (Using TfL's open data API).
+    \n- Street Manager permit data from March 2022 to April 2023.
+    \n- TfL bus passenger data from March 2022 to April 2023.
+    \n- TfL bus routes (Using TfL's open data API).
     """)
     st.markdown("""
     **Methodology:**
@@ -38,8 +38,8 @@ def title_page():
     **Version 2 Features:**
     \n- Use a different TfL source for bus routes: this will hopefully result in all bus routes having a data and will remove
     the black lines from the map. 
-    - Differentiate between regular buses and night buses: for example, add an OS Zoomstack dark layer for night buses. 
-    - Differentiate between numerous bus routes on the same road: create an option to easily 
+    \n- Differentiate between regular buses and night buses: for example, add an OS Zoomstack dark layer for night buses. 
+    \n- Differentiate between numerous bus routes on the same road: create an option to easily 
 cycle through them when clicked. 
     """)
     st.markdown("""
