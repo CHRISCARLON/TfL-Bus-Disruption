@@ -4,13 +4,15 @@
 
 --
 
+> [!NOTE]
+> Contains public sector information licensed under the Open Government Licence v3.0.
+> Street Manager permit data from March 2022 to April 2023 
+> TfL bus passenger data from March 2022 to April 2023 
+> TfL bus routes (Using TfL's open data API). 
+
+--
+
 **Methodology:**
-
-Data Sources: 
-
-- Street Manager permit data from March 2022 to April 2023
-- TfL bus passenger data from March 2022 to April 2023
-- TfL bus routes (Using TfL's open data API). 
 
 Overview:
 
