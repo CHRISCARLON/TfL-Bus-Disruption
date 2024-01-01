@@ -8,8 +8,8 @@ from streamlit_folium import folium_static
 def title_page():
     st.markdown("# :bus: TfL Bus Route Disruption Map Version 1.1")
     st.warning("""
-    Contains public sector information licensed under the Open Government Licence v3.0.
-    **Data Sources:**
+    **Contains public sector information licensed under the Open Government Licence v3.0.**
+    \n**Data Sources:**
     - Street Manager permit data from March 2022 to April 2023.
     - TfL bus passenger data from March 2022 to April 2023.
     - TfL bus routes (Using TfL's open data API).
@@ -36,7 +36,7 @@ def title_page():
     """)
     st.markdown("""
     **Version 2 Features:**
-    - Use a different TfL source for bus routes: this will hopefully result in all bus routes having a data and will remove
+    \n- Use a different TfL source for bus routes: this will hopefully result in all bus routes having a data and will remove
     the black lines from the map. 
     - Differentiate between regular buses and night buses: for example, add an OS Zoomstack dark layer for night buses. 
     - Differentiate between numerous bus routes on the same road: create an option to easily 
